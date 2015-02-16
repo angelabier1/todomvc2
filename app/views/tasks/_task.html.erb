@@ -1,0 +1,13 @@
+<%=form_for task, remote:true do |f| %>
+<li>
+  <div class="view">
+        <%= f.check_box :completed, :class => 'toggle' %>
+    <!--<input class="toggle" type="checkbox" checked>-->
+      <%= f.label :completed, task.title %>
+    <%=button_to "(destroy)", task, method: :delete, remote:true, :class=>"destroy" %>
+  </div>
+      <!--on input click  add class="edit"-->
+  <!--<input class="edit" value="Create a TodoMVC template">-->
+  <%= f.text_field :title, :class => 'edit' %>
+</li>
+<% end %>

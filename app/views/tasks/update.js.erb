@@ -1,0 +1,3 @@
+<% if @task.completed?%>
+$('#edit_task_<%= @task.id %> li').addClass('completed')
+<% end %>
